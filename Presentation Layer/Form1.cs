@@ -73,46 +73,7 @@ namespace UpdatedProject
             File.WriteAllText("summary.txt", summaryReport);
         }
 
-        private void btnViewSummary_Click(object sender, EventArgs e)
-        {
-            // Get all students from the file
-            var studentsList = fileHandler.GetAllStudents();
-
-            // Calculate total number of students and average age
-            int totalStudents = studentsList.Count;
-            double averageAge = studentsList.Any() ? studentsList.Average(s => s.Age) : 0;
-
-            // Display the summary in the label
-            LblSummary.Text = $"Total Students: {totalStudents}\nAverage Age: {averageAge:F2}";
-
-            // Save the summary to a file
-            SaveSummary(totalStudents, averageAge);
-        }
-
-        private void DisplayAllStudents()
-        {
-            var studentsList = fileHandler.GetAllStudents();
-            dataGridView1.DataSource = studentsList;
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                txtStudentID.Text = row.Cells["StudentID"].Value.ToString();
-                txtStudentName.Text = row.Cells["StudentName"].Value.ToString();
-                txtStudentAge.Text = row.Cells["StudentAge"].Value.ToString();
-                txtStudentCourse.Text = row.Cells["StudentCourse"].Value.ToString();
-            }
-        }
-
-        private void LblSummary_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
 }
     }
-}
+
 
