@@ -17,6 +17,7 @@ namespace UpdatedProject
     
     public partial class Form1 : Form
     {
+        private Filehandler fileHandler = new Filehandler();
         public Form1()
         {
             InitializeComponent();
