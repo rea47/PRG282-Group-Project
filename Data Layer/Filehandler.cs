@@ -60,6 +60,3 @@ namespace UpdatedProject.Data_Layer
         }
     }
 }
-
-
-
