@@ -1,4 +1,6 @@
-﻿namespace UpdatedProject
+﻿using System;
+
+namespace UpdatedProject
 {
     partial class Form1
     {
@@ -285,6 +287,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void btnViewSummary_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
